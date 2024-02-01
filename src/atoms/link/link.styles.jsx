@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link as ReactRouterLink } from "react-router-dom"; // Import Link from your routing library if you're using one
+import { Link as ReactRouterLink } from "react-router-dom"; 
 
 const StyledLink = styled(ReactRouterLink)`
   height: 21px;
