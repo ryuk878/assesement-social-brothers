@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "../src/molecules/navbar/navbar.jsx";
+import Home from "./pages/home/home.jsx";
+import Footer from "./molecules/footer/footer.jsx";
+import Blog from "./pages/blog/blog.jsx";
+// import { ApiProvider } from "./api/api.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* <ApiProvider> */}
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/blog' element={<Blog />} />
+        </Routes>
+        <Footer />
+      {/* </ApiProvider> */}
+    </Router>
   );
 }
 
